@@ -1,0 +1,570 @@
+<!--<!DOCTYPE html>-->
+<html lang="en">
+
+<head>
+	<title>Dashboard | CNI</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/vendor/icon-sets.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/jquery/jquery-2.1.0.min.js"></script>
+  
+    <script src="assets/js/underscore-min.js"></script>
+    <script src="assets/js/multiple-select.js"></script>
+  
+    
+	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+	<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="assets/css/multiple-select.css">
+	
+    
+	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker-standalone.css">
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/responsive.bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/buttons.dataTables.min.css">
+	
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="icon" sizes="76x76" href="assets/img/logo-cni.png">
+	
+	<script src="assets/js/bootstrap/bootstrap.min.js"></script>
+	<script src="assets/js/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/js/plugins/jquery-easypiechart/jquery.easypiechart.min.js"></script>
+	<script src="assets/js/plugins/chartist/chartist.min.js"></script>
+	
+	<script src="assets/js/underscore-min.js"></script>
+	<script src="assets/js/klorofil.min.js"></script> 
+    <script src="assets/js/app2.js"></script>
+    <script src="assets/js/moment.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/jquery.tabletojson.js"></script>
+	<script src="Chart.js-2.4.0/Chart.bundle.js"></script>
+	<script src="assets/js/dataTables.buttons.min.js"></script>	
+    <script src="assets/js/buttons.colVis.min.js"></script>
+    
+	<script src="assets/js/multiple-select.js"></script>
+	<link rel="stylesheet" href="assets/css/multiple-select.css">
+	
+	
+    <script type="text/javascript" src="assets/js/fusioncharts.js"></script>
+	<script type="text/javascript" src="assets/js/themes/fusioncharts.theme.fint.js"></script>
+</head>
+
+<body >
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- SIDEBAR -->
+		<div class="sidebar">
+			<div class="brand" align="center">
+					<a href="index.html"><img src="assets/img/logo-cni.png"  width="40%" class="img-responsive logo"></a>
+				</div>
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li><a href="dashboard.html" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END SIDEBAR -->
+		
+		<!-- MAIN -->
+		<div class="main">
+			<!-- NAVBAR -->
+			<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<div class="navbar-btn" style="color:white;">
+							<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+						</div>
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
+								<span class="sr-only">Toggle Navigation</span>
+								<i class="fa fa-bars icon-nav"></i>
+							</button>
+						</div>
+						<div id="navbar-menu" class="navbar-collapse collapse">
+							<form class="navbar-form navbar-left hidden-xs">
+								<div class="input-group">
+									<input type="text" value="" class="form-control" placeholder="Search dashboard...">
+									<span class="input-group-btn"><button type="button" class="btn btn-primary" >Go</button></span>
+								</div>
+							</form>
+							<ul class="nav navbar-nav navbar-right">
+								<li class="dropdown">
+									<a href="" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+										<i class="lnr lnr-alarm bg-primary"></i>
+										<span class="badge bg-danger">5</span>
+									</a>
+									<ul class="dropdown-menu notifications">
+										<li><a href="" class="notification-item"><span class="dot bg-warning"></span>System space is almost full</a></li>
+										<li><a href="" class="notification-item"><span class="dot bg-danger"></span>You have 9 unfinished tasks</a></li>
+										<li><a href="" class="notification-item"><span class="dot bg-success"></span>Monthly report is available</a></li>
+										<li><a href="" class="notification-item"><span class="dot bg-warning"></span>Weekly meeting in 1 hour</a></li>
+
+										<li><a href="#" class="more">See all notifications</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle bg-primary"></i> <span style="color:white;">Help</span> <i class="bg-primary icon-submenu lnr lnr-chevron-down"></i></a>
+									<ul class="dropdown-menu">
+										<li><a href="">Basic Use</a></li>
+										<li><a href="">Working With Data</a></li>
+										<li><a href="">Security</a></li>
+										<li><a href="">Troubleshooting</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="bg-primary fa fa-user-o" aria-hidden="true"></i> <span style="color:white;">User</span> <i class="bg-primary icon-submenu lnr lnr-chevron-down"></i></a>
+									<ul class="dropdown-menu">
+										<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+										<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
+										<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
+										<li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			<!-- END NAVBAR -->
+			
+			<!-- MAIN CONTENT -->
+			<div class="main-content" ng-view>
+				<div class="container-fluid">
+					<!-- OVERVIEW -->
+					<div class="panel panel-headline">
+						<div class="panel-heading panelcolor">
+							<h3 class="panel-title" style="color:white;">Difficultés Par Gouvernorat</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-centered">
+									<div id="map">
+										Map
+									</div>
+								</div>
+								<!--<div class="col-md-6 extra" id="form">
+								<br>
+									<div class="panel panel-headline" style="height:90%; float:none; overflow:auto;">
+										<div class="col-md-6 extra" >
+											<div class="form-group">
+												<label>Date de debut</label>
+												<div class='input-group date' id='datetimepicker6'>
+													<input type='text' id="min" placeholder="jj/mm/aaaa" class="form-control" disabled/>
+													<span class="input-group-addon">
+														 <span class="glyphicon glyphicon-calendar"></span>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class='col-md-6 extra'>
+											<div class="form-group">
+												<label>Date de fin</label>
+												<div class='input-group date' id='datetimepicker7'>
+													<input type='text' id="max" placeholder="jj/mm/aaaa" class="form-control" disabled/>
+													<span class="input-group-addon">
+														<span class="glyphicon glyphicon-calendar"></span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-6 extra">
+									<div>
+										<div class="panel panel-headline" style="float:none; overflow:auto;">
+											<div id="message"></div>
+										</div>
+									</div>
+								</div>
+							</div>    -->                        
+						</div>       
+					</div>
+					<!-- END OVERVIEW -->
+				</div>				
+			</div>
+			<!-- END MAIN CONTENT -->
+			
+			<footer>
+				<div class="container-fluid">
+					<!--<p class="copyright">2016. Developed by <a href="https://cni.tn">CNI</a></p>-->
+				</div>
+			</footer>
+		</div>
+		<!-- END MAIN -->
+	</div>
+	<!-- END WRAPPER -->
+	
+	<!-- Javascript -->
+	<script type="text/javascript">
+		//date
+		/*$(function () {
+			$('#datetimepicker6').datetimepicker({
+				useCurrent: false,
+				format: 'M/D/YYYY' 
+			});
+			$('#datetimepicker7').datetimepicker({
+				useCurrent: false,
+				format: 'M/D/YYYY'
+			});	
+		});*/
+			
+		//map
+		var x=0;
+		FusionCharts.ready(function () {
+			var map = new FusionCharts({
+				"type": "maps/tunisia",
+				"renderAt": "map",
+				"width": "100%",
+				"height": "100%",
+				"dataFormat": "json",
+				"dataSource": {
+					"chart": {
+						//"caption": "Difficultés",
+						//"subcaption": "-2017",
+						"entityfillColor": "#cccccc",
+						"entityFillHoverColor": "#f8bd19",
+						"showLabels": "1",
+						"showValues": "0",
+						//"numberSuffix": " projet(s)",
+						"theme": "fint",
+						"legendPosition": "RIGHT",
+						"baseFontSize": "12",
+						"fontSize": "15",
+						
+						//"showMarkerLabels": "1",
+						//"showConnectorLabels": "1",
+						"connectorColor": "#0075c2",
+						"connectorThickness": "5",
+						"connectorHoverColor": "#f8bd19",
+						"connectorHoverThickness": "7s",
+						"borderColor": "#ffffff",
+						"showShadow": "0"
+					},
+					 "markers": {
+						 "shapes": [{
+							"id": "shape",
+							"type": "circle",
+							"fillcolor": "#f8bd19",
+							"showborder": "0",
+						}],
+						"items": [
+							{},{},{},{},{},{},{},{},{},{}
+						],
+						 "connectors": [
+							{},{},{},{},{}
+						 ]
+					 },
+					 "colorrange": {
+						"color": [
+							{
+								"minvalue": "1",
+								"maxvalue": "2",
+								"displayvalue": "Sans Solution",
+								"code": "#e44a00"
+							},
+							{
+								"minvalue": "2",
+								"maxvalue": "3",
+								"displayvalue": "Avec Solution",
+								"code": "#6baa01"
+							}/*, #f8bd19
+							{
+								"minvalue": "6",
+								"maxvalue": "10",
+								"displayvalue": "Sans Difficulté",
+								"code": "#6baa01"
+							},
+							{
+								"minvalue": "0",
+								"maxvalue": "5",
+								"displayvalue": "Sans Projet",
+								"code": "#0075c2"
+							}*/
+						]
+					},
+					 "data": [
+						{
+							"id": "TN.MN",
+							"tooltext": "Manouba",
+							"x": "199",
+							"y": "2"
+						},
+						{
+							"id": "TN.BJ",
+							"tooltext": "Beja",
+							"x": "167",
+							"y": "77"
+						},
+						{
+							"id": "TN.BA",
+							"tooltext": "Ben Arous",
+							"x": "300",
+							"y": "96"
+						},
+						{
+							"id": "TN.BZ",
+							"tooltext": "Bizerte",
+							"x": "181",
+							"y": "40"
+						},
+						{
+							"id": "TN.GB",
+							"tooltext": "Gabes",
+							"x": "195",
+							"y": "307"
+						},
+						{
+							"id": "TN.GF",
+							"tooltext": "Gafsa",
+							"x": "128",
+							"y": "258"
+						},
+						{
+							"id": "TN.JE",
+							"tooltext": "Jendouba",
+							"x": "121",
+							"y": "125"
+						},
+						{
+							"id": "TN.KR",
+							"tooltext": "Kairouan",
+							"x": "199",
+							"y": "160"
+						},
+						{
+							"id": "TN.KS",
+							"tooltext": "Kasserine",
+							"x": "128",
+							"y": "191"
+						},
+						{
+							"id": "TN.KB",
+							"tooltext": "Kebili",
+							"x": "131",
+							"y": "344"
+						},
+						{
+							"id": "TN.KF",
+							"tooltext": "Kef",
+							"x": "121",
+							"y": "125"
+						},
+						{
+							"id": "TN.MH",
+							"tooltext": "Mahdia",
+							"x": "253",
+							"y": "181"
+						},
+						{
+							"id": "TN.AN",
+							"tooltext": "Ariana",
+							"x": "294",
+							"y": "30"
+
+						},
+						{
+							"id": "TN.ME",
+							"tooltext": "Mednine",
+							"x": "258",
+							"y": "345"
+						},
+						{
+							"id": "TN.MS",
+							"tooltext": "Monastir",
+							"x": "311",
+							"y": "162"
+						},
+						{
+							"id": "TN.NB",
+							"tooltext": "Nabeul",
+							"x": "256",
+							"y": "71"
+						},
+						{
+							"id": "TN.SF",
+							"tooltext": "Sfax",
+							"x": "235",
+							"y": "229"
+						},
+						{
+							"id": "TN.SZ",
+							"tooltext": "Sidi Bou Zid",
+							"x": "175",
+							"y": "218"
+						},
+						{
+							"id": "TN.SL",
+							"tooltext": "Siliana",
+							"x": "164",
+							"y": "123"
+						},
+						{
+							"id": "TN.SS",
+							"tooltext": "Sousse",
+							"x": "238",
+							"y": "132"
+						},
+						{
+							"id": "TN.TA",
+							"tooltext": "Tataouine",
+							"x": "200",
+							"y": "454"
+						},
+						{
+							"id": "TN.TO",
+							"tooltext": "Tozeur",
+							"x": "72",
+							"y": "294"
+						},
+						{
+							"id": "TN.TU",
+							"tooltext": "Tunis",
+							"x": "297",
+							"y": "63"
+						},
+						{
+							"id": "TN.ZA",
+							"tooltext": "Zaghouan",
+							"x": "208",
+							"y": "101"
+						}
+					]
+				},
+/*				"events": {
+					"entityRollover": function (evt, data) {
+						if(x==0){
+							document.getElementById('form').style.height = "60%";
+							document.getElementById('message').style.height = "30%";
+							x++;
+						}
+						if(data.value==null){
+							document.getElementById('message').innerHTML = "Inconnu";	
+						}
+					},
+					"entityRollout": function (evt, data) {
+						document.getElementById('message').innerHTML = "Difficultés:<br>"+nbpj+" projet(s) en total, situé(s) dans "+nbg+" gouvernorat(s)";
+					},
+					"entityClick": function (evt, data) {
+					   alert("Gouvernorat "+data.label+".");
+					}
+				}*/
+			});
+
+			//map.setJSONUrl("stream.json");
+			var mapdata = map.getJSONData().data;
+			var mapmark = map.getJSONData().markers;
+			
+			console.log(mapdata);
+			console.log(mapmark);
+
+			//json
+			var pj=[];
+			var leg=[];
+			var sol=[];
+			var df=[];
+			var code=[];
+			var zone=[];
+			
+			$.getJSON("zone2.json", function (data) {
+				a=Object.keys(data);
+				$.each(data[a], function (k, v) {
+					
+					pj.push(Object.values(v)[11]);
+					
+					df.push(Object.values(v)[15]);
+					code.push(Object.values(v)[18]);
+					zone.push(Object.values(v)[19]);
+					sol.push(Object.values(v)[20]);
+					
+					v=Object.values(v)[20];
+					
+					if(v=="null"){
+						v=1;
+						
+						msg=zone[k]+"<br><ul><li>Reference Projet: "+pj[k]+"</li>"+"<li>Difficulté: "+df[k]+"</li><li>Solution: Aucun</li></ul>";
+						
+						//mapdata[code[k]].hoverColor = "#e44a00";
+					}
+					else{
+						v=2;
+						
+						msg=zone[k]+"<br><ul><li>Reference Projet: "+pj[k]+"</li>"+"<li>Difficulté: "+df[k]+"</li><li>Solution: "+sol[k]+"</li></ul>";
+						
+						//mapdata[code[k]].hoverColor = "#6baa01";
+					}
+					
+					leg.push(v);
+					
+					mapdata[code[k]].value= leg[k]; 
+					mapdata[code[k]].tooltext = msg;
+					/*if(code[k]!="null"){
+						 	
+					}*/
+				});
+				
+				nbpj=_.uniq(pj).length;
+				nbg=_.uniq(zone).length;
+				
+				var n = 0;
+				var m = 0;		
+				var nbd = 2;	
+				var nbs = 0;
+				for (var i = 0; i < pj.length - 1; i++) {
+					for (var j = i+1; j < pj.length; j++) {
+						if(pj[i]==pj[j]){
+							if(zone[i]!=zone[j]){
+								
+								mapmark.items[n].id=zone[i];
+								mapmark.items[n].shapeid="shape";								
+								mapmark.items[n].x=mapdata[code[i]].x;
+								mapmark.items[n].y=mapdata[code[i]].y;
+								if(mapdata[code[i]].value == 2){
+									nbs++;
+								}
+								
+								if(mapdata[code[j]].value == 2){
+									nbs++;
+								}
+								mapmark.connectors[m].from=zone[i];
+								mapmark.connectors[m].to=zone[j];
+								mapmark.connectors[m].tooltext=zone[i]+"-"+zone[j]+"<br><ul><li>Ref_Projet: "+pj[i]+"</li>"+"<li>Nombre de difficultés: "+nbd+"</li><li> Nombre de solution(s): "+nbs+"</li></ul>";
+								
+								//mapmark.connectors[n].label=pj[i];
+								
+								m++
+								n++;
+								
+								mapmark.items[n].id=zone[j];
+								mapmark.items[n].shapeid="shape";
+								mapmark.items[n].x=mapdata[code[j]].x;
+								mapmark.items[n].y=mapdata[code[j]].y;
+								
+								n++;
+							}						
+						}
+					}
+				}
+				
+				console.log(pj);
+				console.log(code);
+				console.log(sol);
+				console.log(df);
+				console.log(zone);
+				console.log(leg);
+			});
+			map.render();
+		});
+	</script>   
+</body>
+</html>

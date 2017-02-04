@@ -1,0 +1,59 @@
+{
+    "LIST_PROJET_SECTEUR": [{
+            "SECTEUR": "Formation",
+            "COUT_TOTAL_PROJET": "21182352,09",
+            "COUT_TOTAL_ENG_PROJET": "5189157,59",
+            "COUT_TOTAL_PAY_PROJET": "3843657,60",
+            "COUT_TOTAL_mAY_PROJET": "6582354,89"
+        },
+        {
+            "SECTEUR": "Aménagement de sécurité routière",
+            "COUT_TOTAL_PROJET": "32182352,89",
+            "COUT_TOTAL_ENG_PROJET": "22182352,00",
+            "COUT_TOTAL_PAY_PROJET": "12182352,72",
+            "COUT_TOTAL_mAY_PROJET": "6582354,89"
+        },
+        {
+            "SECTEUR": "Batiments civils",
+            "COUT_TOTAL_PROJET": "81582352,09",
+            "COUT_TOTAL_ENG_PROJET": "53182352,80",
+            "COUT_TOTAL_PAY_PROJET": "43182352,73",
+            "COUT_TOTAL_mAY_PROJET": "6582354,89"
+        },
+        {
+            "SECTEUR": "Culture",
+            "COUT_TOTAL_PROJET": "11182352,09",
+            "COUT_TOTAL_ENG_PROJET": "8182357,79",
+            "COUT_TOTAL_PAY_PROJET": "7182357,60",
+            "COUT_TOTAL_mAY_PROJET": "6582354,89"
+        },
+        {
+            "SECTEUR": "Education",
+            "COUT_TOTAL_PROJET": "51182400,7",
+            "COUT_TOTAL_ENG_PROJET": "11182400,7",
+            "COUT_TOTAL_PAY_PROJET": "1182400,77",
+            "COUT_TOTAL_mAY_PROJET": "6582354,89"
+        },
+        {
+            "SECTEUR": "Informatique",
+            "COUT_TOTAL_PROJET": "98582354,89",
+            "COUT_TOTAL_ENG_PROJET": "58582354,89",
+            "COUT_TOTAL_PAY_PROJET": "6582354,89",
+            "COUT_TOTAL_mAY_PROJET": "6582354,89"
+        },
+        {
+            "SECTEUR": "Formation",
+            "COUT_TOTAL_PROJET": "21182352,09",
+            "COUT_TOTAL_ENG_PROJET": "5189157,59",
+            "COUT_TOTAL_PAY_PROJET": "3843657,60",
+            "COUT_TOTAL_mAY_PROJET": "6582354,89"
+        },
+        {
+            "SECTEUR": "Emploi",
+            "COUT_TOTAL_PROJET": "61182360,69",
+            "COUT_TOTAL_ENG_PROJET": "41182360,69",
+            "COUT_TOTAL_PAY_PROJET": "3182360,69",
+            "COUT_TOTAL_mAY_PROJET": "6582354,89"
+        }]
+}
+

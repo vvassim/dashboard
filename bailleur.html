@@ -1,0 +1,581 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Dashboard | CNI</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/vendor/icon-sets.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/jquery/jquery-2.1.0.min.js"></script>
+  
+    <script src="assets/js/underscore-min.js"></script>
+    <script src="assets/js/multiple-select.js"></script>
+  
+    
+	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+	<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="assets/css/multiple-select.css">
+	
+    
+	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker-standalone.css">
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/responsive.bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/buttons.dataTables.min.css">
+	
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	
+	<script src="assets/js/bootstrap/bootstrap.min.js"></script>
+	<script src="assets/js/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/js/plugins/jquery-easypiechart/jquery.easypiechart.min.js"></script>
+	<script src="assets/js/plugins/chartist/chartist.min.js"></script>
+	
+	<script src="assets/js/underscore-min.js"></script>
+	<script src="assets/js/klorofil.min.js"></script> 
+    <script src="assets/js/app2.js"></script>
+    <script src="assets/js/moment.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/jquery.tabletojson.js"></script>
+     <script src="Chart.js-2.4.0/Chart.bundle.js"></script>
+      <script src="assets/js/dataTables.buttons.min.js"></script>
+    <script src="assets/js/buttons.colVis.min.js"></script>
+    
+    
+ 
+</head>
+
+<body >
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- SIDEBAR -->
+		<div class="sidebar">
+			<div class="brand" align="center">
+					<a href="index.html"><img src="assets/img/logo-cni.png"  width="40%" class="img-responsive logo"></a>
+				</div>
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li><a href="dashboard.html" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END SIDEBAR -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- NAVBAR -->
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-btn">
+						<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+					</div>
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
+							<span class="sr-only">Toggle Navigation</span>
+							<i class="fa fa-bars icon-nav"></i>
+						</button>
+					</div>
+					<div id="navbar-menu" class="navbar-collapse collapse">
+						<form class="navbar-form navbar-left hidden-xs">
+							<div class="input-group">
+								<input type="text" value="" class="form-control" placeholder="Search dashboard...">
+<span class="input-group-btn"><button type="button" class="btn btn-primary" onclick="alert($('#sct').val())"  >Go</button></span>
+							</div>
+						</form>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a href="" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+									<i class="lnr lnr-alarm"></i>
+									<span class="badge bg-danger">5</span>
+								</a>
+								<ul class="dropdown-menu notifications">
+									<li><a href="" class="notification-item"><span class="dot bg-warning"></span>System space is almost full</a></li>
+									<li><a href="" class="notification-item"><span class="dot bg-danger"></span>You have 9 unfinished tasks</a></li>
+									<li><a href="" class="notification-item"><span class="dot bg-success"></span>Monthly report is available</a></li>
+									<li><a href="" class="notification-item"><span class="dot bg-warning"></span>Weekly meeting in 1 hour</a></li>
+									
+									<li><a href="#" class="more">See all notifications</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle"></i> <span>Help</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="">Basic Use</a></li>
+									<li><a href="">Working With Data</a></li>
+									<li><a href="">Security</a></li>
+									<li><a href="">Troubleshooting</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle" aria-hidden="true"></i> <span>User</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+									<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
+									<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
+									<li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- END NAVBAR -->
+			<!-- MAIN CONTENT -->
+			<div class="main-content " ng-view>
+                
+
+<div class="container-fluid">
+                    
+					<!-- OVERVIEW -->
+					<div class="panel panel-headline" id="filters">
+						<div class="panel-heading panelcolor">
+							<h3 class="panel-title">Bailleurs tous contrats</h3>
+						</div>
+						<div class="panel-body ">
+					
+                            <div class="row ">
+                    <div class="col-md-6 extra">      
+							<label >Ministére</label>
+							<br>
+							<select id="ministere" multiple>
+
+							</select>
+						</div>  
+
+						<div class="col-md-6 extra">  
+							<label >Structure niveau 2</label>
+
+							<br>
+							<select id="struniv2" multiple="multiple">
+
+							</select>
+						</div>	
+
+						<div class="col-md-6 extra">      
+							<label>Structure niveau 3</label>
+							<br>
+							<select id="struniv3" multiple="multiple">
+
+							</select>
+						</div>   
+
+						<div class="col-md-6 extra">  
+							<label>Secteur</label>
+							<br>
+							<select id="sct" multiple="multiple">
+						
+							</select>
+						</div>
+								
+						<div class="col-md-6 extra">  
+							<label>Bailleur</label>
+							<br>
+							<select id="bf" multiple="multiple">
+						
+							</select>
+						</div> 
+
+						<div class="col-md-6 extra">  
+							<label>Code FE</label>
+							<br>
+							<select id="fe" multiple="multiple">
+						
+							</select>
+						</div> 
+                                
+    <div class="col-md-6 extra" >
+        <div class="form-group">
+            <label >date min</label>
+            <div class='input-group date' id='datetimepicker6'>
+                <input type='text' id="min" placeholder="yyyy/mm/dd"  class="form-control" />
+                <span class="input-group-addon">
+                     <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class='col-md-6 extra'>
+        <div class="form-group">
+            <label >date max</label>
+            <div class='input-group date' id='datetimepicker7'>
+                <input type='text' id="max" placeholder="yyyy/mm/dd" class="form-control"/>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+                            
+</div>       
+					</div>
+					<!-- END OVERVIEW -->
+                    </div>
+							<!-- BORDERED TABLE -->
+							<div class="panel panel-headline">
+								<div class="panel-heading">
+									           <ul class="nav nav-tabs">
+			<li class="active">
+                
+        <a  href="#1" data-toggle="tab" id="dataa" onclick="event.preventDefault();$('#filters').show('fast');"><i class="fa fa-table" aria-hidden="true"></i> Data table</a>
+			</li>
+			<li><a  id="chartt" href="#2" data-toggle="tab" onclick="event.preventDefault(); $('#filters').hide('fast'); $('html, body').animate({
+                    scrollTop: 0
+                }, 500);"><i class="fa fa-bar-chart" aria-hidden="true"></i> charts</a>
+			</li>
+		</ul>	
+								</div>
+                                
+                                <div class="tab-content "  style="margin-top:-30px">
+			  <div class="tab-pane active" id="1">
+          	<div class="panel-body">
+                                    
+                                    <div class="table-responsive">
+                                        
+									<table class="table table-striped dispaly" id="tab" >
+                                        
+										<thead id="tab_head_data">
+                                        </thead >
+                                        <tbody id="tab_body_data">
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                    
+                                   
+                                </div>
+				</div>
+				<div class="tab-pane" id="2">
+                     
+                    <hr> 
+                    <div class="row">
+                     <a class="pull-right" style="margin-right:2%"  onclick=" $( '.eye' ).toggle('fast'); $( '#tab_charth,#tab_chartb' ).toggle('fast');"><i class="fa fa-eye fa-lg eye" aria-hidden="true"  ></i><i class="fa fa-eye-slash fa-lg eye" aria-hidden="true"  style="display: none"></i></a> </div>
+          <div class="table-responsive">
+          <table class=" table zui-table zui-table-zebra zui-table-horizontal" cellpadding="0" cellspacing="0" id="table">
+       
+        <thead id="tab_charth"></thead>
+        <tbody  id="tab_chartb"></tbody>
+    </table>
+                    </div>
+                    <hr>
+                    <div class="row">
+    <div id="container" class="col-sm-12 can"  style="width:100%">
+        <canvas id="canvas"></canvas>
+    </div>
+                    </div>
+                    
+                    
+				</div>
+			</div>
+							
+                            </div>
+                                </div>
+                            
+                                    <div class="table-responsive" hidden>
+									<table class="table table-striped dispaly" id="ta" >
+										<thead id="tab_head_data_cp">
+                                        </thead >
+                                        <tbody id="tab_body_data_cp">
+                                        </tbody>
+                                    </table>
+                                    </div>
+                           
+	<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker6').datetimepicker({
+         format: 'YYYY/M/D'   
+        });
+        $('#datetimepicker7').datetimepicker({
+            useCurrent: false, //Important! See issue #1075
+             format: 'YYYY/M/D'
+        });
+        $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker7").on("dp.change", function (e) {
+            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+     
+</script>
+			
+           <script>
+	   $('#struniv2').multipleSelect({
+			placeholder: "Structure niveau 2",
+			filter: true,
+			width:'100%'
+		});
+			
+		$('#struniv3').multipleSelect({
+			placeholder: "Structure niveau 3",
+			filter: true,
+			width:'100%'
+		});
+			
+		$('#sct').multipleSelect({
+			placeholder: "Secteur",
+			filter: true,
+			width:'100%'
+		});
+		
+	   $('#bf').multipleSelect({
+			placeholder: "Bailleur",
+			filter: true,
+			width:'100%'
+		});
+		
+	   $('#fe').multipleSelect({
+			placeholder: "Code FE",
+			filter: true,
+			width:'100%'
+		});
+			
+		$.getJSON("detfin.json", function (data) {
+			a=Object.keys(data);
+			$.each(data[a], function (k, v) {
+				ministere.push(Object.values(v)[1]);
+			})
+			ministere=_.uniq(ministere);
+			$.each(ministere, function (item) {
+				$('#ministere').append($('<option>', { 
+					value: ministere[item].replace(/,/g, "."),
+					text : ministere[item].replace(/,/g, ".") 
+				}));
+			}); 
+			$('#ministere').multipleSelect({
+				placeholder: "Ministére",
+				filter: true,
+				width:'100%',
+            })
+			
+			
+			$("#ministere").change(function(){
+				ministere=[];
+				$('#ministere').find("option:selected").each(function(){
+					ministere.push($(this).val());
+				});
+				ministere=_.uniq(ministere);
+				$.getJSON("bailleur.json", function (data) {
+					$('#struniv2').empty();
+					a=Object.keys(data);
+					$.each(ministere, function (km) {
+						structureniv2=[];
+						$.each(data[a], function (k, v) {
+							if(Object.values(v)[1]==ministere[km]){
+								structureniv2.push(Object.values(v)[4]);
+							}
+						});
+						structureniv2=_.uniq(structureniv2);
+
+						var optgroup=$('<optgroup/>', {
+								label: ministere[km].replace(/,/g, ".")
+						});
+						$.each(structureniv2, function (item) {	
+							optgroup.append($('<option>', { 
+								value: structureniv2[item].replace(/,/g, "."),
+								text : structureniv2[item].replace(/,/g, ".") 
+							}));				
+							$('#struniv2').append(optgroup);
+						});
+					});
+					$('#struniv2').multipleSelect({
+						placeholder: "Structure niveau 2",
+						filter: true,
+						width:'100%'
+					});
+				});
+			});
+			
+			
+			
+			
+			$("#struniv2").change(function(){
+				structureniv2=[];
+				$('#struniv2').find("option:selected").each(function(){
+					structureniv2.push($(this).val());
+				});
+				structureniv2=_.uniq(structureniv2);
+				$.getJSON("bailleur.json", function (data) {
+					$('#struniv3').empty();
+					a=Object.keys(data);
+					$.each(structureniv2, function (km) {
+						structureniv3=[];
+						$.each(data[a], function (k, v) {
+							if(Object.values(v)[4]==structureniv2[km]){
+								structureniv3.push(Object.values(v)[7]);
+							}
+						});
+						structureniv3=_.uniq(structureniv3);
+
+						var optgroup=$('<optgroup/>', {
+								label:structureniv2[km].replace(/,/g, ".")
+						});
+						$.each(structureniv3, function (item) {	
+							optgroup.append($('<option>', { 
+								value: structureniv3[item].replace(/,/g, "."),
+								text : structureniv3[item].replace(/,/g, ".") 
+							}));				
+							$('#struniv3').append(optgroup);
+						});
+					});
+					$('#struniv3').multipleSelect({
+						placeholder: "Structure niveau 3",
+						filter: true,
+						width:'100%'
+					});
+				});
+			});
+            
+			
+			
+			$("#struniv3").change(function(){
+				structureniv3=[];
+				$('#struniv3').find("option:selected").each(function(){
+					structureniv3.push($(this).val());
+				});
+				structureniv3=_.uniq(structureniv3);
+				$.getJSON("bailleur.json", function (data) {
+					$('#sct').empty();
+					a=Object.keys(data);
+					$.each(structureniv3, function (km) {
+						sct=[];
+						$.each(data[a], function (k, v) {
+							if(Object.values(v)[7]==structureniv3[km]){
+								sct.push(Object.values(v)[10]);
+							}
+						});
+						sct=_.uniq(sct);
+
+						var optgroup=$('<optgroup/>', {
+								label:structureniv3[km].replace(/,/g, ".")
+						});
+						$.each(sct, function (item) {	
+							optgroup.append($('<option>', { 
+								value: sct[item].replace(/,/g, "."),
+								text : sct[item].replace(/,/g, ".") 
+							}));				
+							$('#sct').append(optgroup);
+						});
+					});
+					$('#sct').multipleSelect({
+						placeholder: "Secteur",
+						filter: true,
+						width:'100%'
+					});
+				});
+			});
+			
+			
+			
+			
+			$("#sct").change(function(){
+				sct=[];
+				$('#sct').find("option:selected").each(function(){
+					sct.push($(this).val());
+				});
+				sct=_.uniq(sct);
+				$.getJSON("bailleur.json", function (data) {
+					$('#bf').empty();
+					a=Object.keys(data);
+					$.each(sct, function (km) {
+						bf=[];
+						$.each(data[a], function (k, v) {
+							if(Object.values(v)[10]==sct[km]){
+								bf.push(Object.values(v)[11]);
+								console.log()
+							}
+						});
+						bf=_.uniq(bf);
+
+						var optgroup=$('<optgroup/>', {
+								label:sct[km].replace(/,/g, ".")
+						});
+						$.each(bf, function (item) {	
+							optgroup.append($('<option>', { 
+								value: bf[item].replace(/,/g, "."),
+								text : bf[item].replace(/,/g, ".") 
+							}));				
+							$('#bf').append(optgroup);
+						});
+					});
+					$('#bf').multipleSelect({
+						placeholder: "Bailleur",
+						filter: true,
+						width:'100%'
+					});
+				});
+			});
+			
+			
+			$("#bf").change(function(){
+				bf=[];
+				$('#bf').find("option:selected").each(function(){
+					bf.push($(this).val());
+				});
+				bf=_.uniq(bf);
+				$.getJSON("bailleur.json", function (data) {
+					$('#fe').empty();
+					a=Object.keys(data);
+					$.each(bf, function (km) {
+						fe=[];
+						$.each(data[a], function (k, v) {
+							if(Object.values(v)[11]==bf[km]){
+								fe.push(Object.values(v)[14]);
+								console.log()
+							}
+						});
+						fe=_.uniq(fe);
+
+						var optgroup=$('<optgroup/>', {
+								label:bf[km].replace(/,/g, ".")
+						});
+						$.each(fe, function (item) {	
+							optgroup.append($('<option>', { 
+								value: fe[item].replace(/,/g, "."),
+								text : fe[item].replace(/,/g, ".") 
+							}));				
+							$('#fe').append(optgroup);
+						});
+					});
+					$('#fe').multipleSelect({
+						placeholder: "Code FE",
+						filter: true,
+						width:'100%'
+					});
+				});
+			});
+		});                
+    </script>	
+          <script src="assets/js/multiple-select.js"></script>
+<link rel="stylesheet" href="assets/css/multiple-select.css">
+		
+			</div>
+                    
+			<!-- END MAIN CONTENT -->
+			<footer>
+				<div class="container-fluid">
+					<!--<p class="copyright">2016. Developed by <a href="https://cni.tn">CNI</a></p>-->
+				</div>
+			</footer>
+		</div>
+		<!-- END MAIN -->
+	</div>
+	<!-- END WRAPPER -->
+	<!-- Javascript -->
+
+     
+       
+        
+</body>
+
+</html>
